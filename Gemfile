@@ -12,12 +12,21 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
+  gem 'therubyracer', platforms: :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
+
+# Recommended for bootstrapping the application
+gem 'haml-rails'
+gem 'devise'
+gem 'bootstrap-sass'
+gem 'simple_form'
+
+# Under further consideration
+# gem 'better_errors'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
