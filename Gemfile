@@ -21,7 +21,7 @@ gem 'jquery-rails'
 
 # Recommended for bootstrapping the application
 gem 'haml-rails'
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'rails4'
 gem 'bootstrap-sass'
 gem 'simple_form'
 
