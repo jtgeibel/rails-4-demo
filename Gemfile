@@ -25,6 +25,9 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'rails
 gem 'bootstrap-sass'
 gem 'simple_form'
 
+# Temporary hack for devise
+gem 'protected_attributes'
+
 # Under further consideration
 # gem 'better_errors'
 
