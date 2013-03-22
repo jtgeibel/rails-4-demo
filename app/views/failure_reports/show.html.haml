@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Author:
+  = @failure_report.author
+%p
+  %b Unit:
+  = @failure_report.unit
+%p
+  %b Subject:
+  = @failure_report.subject
+%p
+  %b Description:
+  = @failure_report.description
+%p
+  %b Rma:
+  = @failure_report.rma
+%p
+  %b Failcode:
+  = @failure_report.failcode
+
+= link_to 'Edit', edit_failure_report_path(@failure_report)
+\|
+= link_to 'Back', failure_reports_path

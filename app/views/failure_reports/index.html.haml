@@ -1,0 +1,29 @@
+%h1 Listing failure_reports
+
+%table
+  %tr
+    %th Author
+    %th Unit
+    %th Subject
+    %th Description
+    %th Rma
+    %th Failcode
+    %th
+    %th
+    %th
+
+  - @failure_reports.each do |failure_report|
+    %tr
+      %td= failure_report.author
+      %td= failure_report.unit
+      %td= failure_report.subject
+      %td= failure_report.description
+      %td= failure_report.rma
+      %td= failure_report.failcode
+      %td= link_to 'Show', failure_report
+      %td= link_to 'Edit', edit_failure_report_path(failure_report)
+      %td= link_to 'Destroy', failure_report, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Failure report', new_failure_report_path

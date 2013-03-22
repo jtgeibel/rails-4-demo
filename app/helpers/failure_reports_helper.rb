@@ -1,0 +1,2 @@
+module FailureReportsHelper
+end
