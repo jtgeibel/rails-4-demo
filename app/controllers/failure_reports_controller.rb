@@ -1,5 +1,6 @@
 class FailureReportsController < ApplicationController
   before_action :set_failure_report, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /failure_reports
   # GET /failure_reports.json
@@ -25,6 +26,7 @@ class FailureReportsController < ApplicationController
   # POST /failure_reports.json
   def create
     @failure_report = FailureReport.new(failure_report_params)
+    @failure_report.author = current_user
 
     respond_to do |format|
       if @failure_report.save
@@ -69,6 +71,6 @@ class FailureReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def failure_report_params
-      params.require(:failure_report).permit(:author_id, :unit_id, :subject, :description, :rma, :failcode)
+      params.require(:failure_report).permit(:unit_id, :subject, :description, :rma, :failcode)
     end
 end
