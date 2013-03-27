@@ -1,4 +1,5 @@
 DemoApp::Application.routes.draw do
+  get "welcome/index"
   resources :failure_reports
 
   devise_for :users
