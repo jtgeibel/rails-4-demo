@@ -23,7 +23,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'rails4'
 gem 'bootstrap-sass'
-gem 'simple_form'
+gem 'simple_form', git: "https://github.com/plataformatec/simple_form.git"
 
 # Temporary hack for devise
 # gem 'protected_attributes'
