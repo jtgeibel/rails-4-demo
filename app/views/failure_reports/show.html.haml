@@ -2,7 +2,7 @@
 
 %p
   %b Author:
-  = @failure_report.author
+  = @failure_report.author.email
 %p
   %b Unit:
   = @failure_report.unit
@@ -21,4 +21,4 @@
 
 = link_to 'Edit', edit_failure_report_path(@failure_report)
 \|
-= link_to 'Back', failure_reports_path
+= link_to 'All failure reports', failure_reports_path
