@@ -2,7 +2,8 @@
   = f.error_notification
   = f.input :unit, hint: "The unit's serail number"
   = f.input :subject, hint: "Must be at least 15 characters"
-  = f.input :description
+  = f.input :description, :input_html => { :rows => 10 }
   = f.input :rma, label: "RMA number"
   = f.input :failcode, hint: "Failure code; this will be a list of options"
-  = f.button :submit
+  .controls
+    = f.button :submit
