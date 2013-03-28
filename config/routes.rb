@@ -1,4 +1,6 @@
 DemoApp::Application.routes.draw do
+  resources :units
+
   get "welcome/index"
   resources :failure_reports
 

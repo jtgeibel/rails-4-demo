@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  part: MyString
+  serial: MyString
+  contract_id: 
+
+two:
+  part: MyString
+  serial: MyString
+  contract_id: 

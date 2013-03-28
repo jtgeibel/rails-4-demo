@@ -1,0 +1,10 @@
+= simple_form_for(@unit) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :part
+    = f.input :serial
+    = f.association :contract
+
+  .form-actions
+    = f.button :submit

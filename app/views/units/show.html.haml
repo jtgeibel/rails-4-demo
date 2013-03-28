@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Part:
+  = @unit.part
+%p
+  %b Serial:
+  = @unit.serial
+%p
+  %b Contract:
+  = @unit.contract
+
+= link_to 'Edit', edit_unit_path(@unit)
+\|
+= link_to 'Back', units_path
