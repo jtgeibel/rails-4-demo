@@ -9,8 +9,6 @@
     %th RMA
     %th Failcode
     %th
-    %th
-    %th
 
   - @failure_reports.each do |failure_report|
     %tr
@@ -20,9 +18,12 @@
       %td= failure_report.description
       %td= failure_report.rma
       %td= failure_report.failcode
-      %td= link_to 'Show', failure_report
-      %td= link_to 'Edit', edit_failure_report_path(failure_report)
-      %td= link_to 'Destroy', failure_report, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td
+        = link_to 'Show', failure_report
+        |
+        = link_to 'Edit', edit_failure_report_path(failure_report)
+        |
+        = link_to 'Destroy', failure_report, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
