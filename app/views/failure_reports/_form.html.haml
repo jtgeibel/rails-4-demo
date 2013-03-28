@@ -1,7 +1,7 @@
 = simple_form_for(@failure_report, html: {class: 'form-horizontal' }) do |f|
   = f.error_notification
   = f.input :unit, hint: "The unit's serail number"
-  = f.input :subject
+  = f.input :subject, hint: "Must be at least 15 characters"
   = f.input :description
   = f.input :rma, label: "RMA number"
   = f.input :failcode, hint: "Failure code; this will be a list of options"
