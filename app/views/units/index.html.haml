@@ -1,12 +1,10 @@
 %h1 Listing units
 
-%table
+%table.table
   %tr
     %th Part
     %th Serial
     %th Contract
-    %th
-    %th
     %th
 
   - @units.each do |unit|
@@ -14,9 +12,12 @@
       %td= unit.part
       %td= unit.serial
       %td= unit.contract
-      %td= link_to 'Show', unit
-      %td= link_to 'Edit', edit_unit_path(unit)
-      %td= link_to 'Destroy', unit, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td
+        =link_to 'Show', unit
+        |
+        = link_to 'Edit', edit_unit_path(unit)
+        |
+        = link_to 'Destroy', unit, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

@@ -3,7 +3,7 @@
   = @failure_report.author.email
 %p
   %b Unit:
-  = @failure_report.unit
+  = link_to @failure_report.unit.serial, @failure_report.unit
 %p
   %b Subject:
   = @failure_report.subject

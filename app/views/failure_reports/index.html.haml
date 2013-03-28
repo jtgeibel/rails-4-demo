@@ -13,7 +13,7 @@
   - @failure_reports.each do |failure_report|
     %tr
       %td= failure_report.author.email
-      %td= failure_report.unit
+      %td= link_to failure_report.unit.serial, failure_report.unit
       %td= failure_report.subject
       %td= failure_report.description
       %td= failure_report.rma

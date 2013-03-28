@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130322023751) do
+ActiveRecord::Schema.define(version: 20130328172946) do
 
   create_table "failure_reports", force: true do |t|
     t.integer  "author_id"
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(version: 20130322023751) do
 
   add_index "failure_reports", ["author_id"], name: "index_failure_reports_on_author_id"
   add_index "failure_reports", ["unit_id"], name: "index_failure_reports_on_unit_id"
+
+  create_table "units", force: true do |t|
+    t.string   "part"
+    t.string   "serial"
+    t.integer  "contract_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "units", ["contract_id"], name: "index_units_on_contract_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
