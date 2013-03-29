@@ -25,6 +25,9 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'rails
 gem 'bootstrap-sass'
 gem 'simple_form', git: "https://github.com/plataformatec/simple_form.git"
 
+gem 'simple-navigation'
+gem 'twitter-bootstrap-markup-rails', git: "https://github.com/jtgeibel/twitter-bootstrap-markup-rails.git"
+
 # Temporary hack for devise
 # gem 'protected_attributes'
 
