@@ -15,6 +15,7 @@ class UnitsController < ApplicationController
   # GET /units/new
   def new
     @unit = Unit.new
+    @cancel_path = units_path
   end
 
   # GET /units/1/edit
@@ -65,6 +66,7 @@ class UnitsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_unit
       @unit = Unit.find(params[:id])
+      @cancel_path = unit_path(@unit)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

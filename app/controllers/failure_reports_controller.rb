@@ -16,6 +16,7 @@ class FailureReportsController < ApplicationController
   # GET /failure_reports/new
   def new
     @failure_report = FailureReport.new
+    @cancel_path = failure_reports_path
   end
 
   # GET /failure_reports/1/edit
@@ -67,6 +68,7 @@ class FailureReportsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_failure_report
       @failure_report = FailureReport.find(params[:id])
+      @cancel_path = failure_report_path(@failure_report)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
