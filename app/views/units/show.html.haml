@@ -1,15 +1,9 @@
-%p#notice= notice
+%dl.dl-horizontal
+  %dt Part:
+  %dd= @unit.part
+  %dt Serial:
+  %dd= @unit.serial
+  %dt Contract:
+  %dd= @unit.contract
 
-%p
-  %b Part:
-  = @unit.part
-%p
-  %b Serial:
-  = @unit.serial
-%p
-  %b Contract:
-  = @unit.contract
-
-= link_to 'Edit', edit_unit_path(@unit)
-\|
-= link_to 'Back', units_path
+= link_to 'Edit', edit_unit_path(@unit), :class => "btn"

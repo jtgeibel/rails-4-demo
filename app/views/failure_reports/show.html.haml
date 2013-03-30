@@ -1,20 +1,15 @@
-%p
-  %b Author:
-  = @failure_report.author.email
-%p
-  %b Unit:
-  = link_to @failure_report.unit.serial, @failure_report.unit
-%p
-  %b Subject:
-  = @failure_report.subject
-%p
-  %b Description:
-  = @failure_report.description
-%p
-  %b Rma:
-  = @failure_report.rma
-%p
-  %b Failcode:
-  = @failure_report.failcode
+%dl.dl-horizontal
+  %dt Author:
+  %dd= @failure_report.author.email
+  %dt Unit:
+  %dd= link_to @failure_report.unit.serial, @failure_report.unit
+  %dt Subject:
+  %dd= @failure_report.subject
+  %dt Description:
+  %dd= @failure_report.description
+  %dt RMA:
+  %dd= @failure_report.rma
+  %dt Failcode:
+  %dd= @failure_report.failcode
 
-= link_to 'Edit', edit_failure_report_path(@failure_report)
+= link_to 'Edit', edit_failure_report_path(@failure_report), :class => "btn"
