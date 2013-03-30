@@ -1,7 +1,9 @@
 .pull-right
   = bootstrap_button 'Edit', edit_unit_path(@unit), :icon => 'icon-edit'
-  = bootstrap_button 'Workflow history', '', :icon => 'icon-th-list', :disabled => true
-  = bootstrap_button 'Update', '', :type => "btn-primary", :icon => 'icon-qrcode', :icon_white => true, :disabled => true
+  = bootstrap_button 'Workflow history', '', :icon => 'icon-list-alt', :disabled => true
+  = bootstrap_button 'Update', '', :type => "btn-primary", :icon => 'icon-barcode', :icon_white => true, :disabled => true
+
+%h1.page-header= "#{@unit.part} / #{@unit.serial}"
 
 %dl.dl-horizontal
   %dt Part:

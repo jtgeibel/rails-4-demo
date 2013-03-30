@@ -2,6 +2,8 @@
   = bootstrap_button 'Edit', edit_failure_report_path(@failure_report), :icon => 'icon-edit'
   = bootstrap_button 'Corrective action', '', :type => 'btn-primary', :icon => 'icon-check', :icon_white => true, :disabled => true
 
+%h1.page-header= @failure_report.subject
+
 %dl.dl-horizontal
   %dt Author:
   %dd= @failure_report.author.email
