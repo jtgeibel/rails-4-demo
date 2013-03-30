@@ -5,5 +5,6 @@
   = f.input :serial
   -#= f.association :contract, label_method: :name
 
-  .controls
-    = f.button :submit
+  .form-actions
+    = f.button :submit, :class => "btn-primary"
+    = bootstrap_button "Cancel", units_path
