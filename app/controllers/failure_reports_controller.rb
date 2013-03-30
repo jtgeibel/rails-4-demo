@@ -1,6 +1,6 @@
 class FailureReportsController < ApplicationController
   before_action :set_failure_report, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, only: [:new, :edit, :update, :destroy]
 
   # GET /failure_reports
   # GET /failure_reports.json
