@@ -1,3 +1,6 @@
+.pull-right
+  = bootstrap_button 'Edit', edit_failure_report_path(@failure_report), :icon => 'icon-pencil'
+
 %dl.dl-horizontal
   %dt Author:
   %dd= @failure_report.author.email
@@ -11,5 +14,3 @@
   %dd= @failure_report.rma
   %dt Failcode:
   %dd= @failure_report.failcode
-
-= link_to 'Edit', edit_failure_report_path(@failure_report), :class => "btn"

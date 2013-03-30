@@ -1,3 +1,7 @@
+%p.pull-right
+  = bootstrap_button 'Export', '', :icon => "icon-download-alt", disabled: true
+  = bootstrap_button 'New Failure report', new_failure_report_path, :type => "btn-primary", :icon => "icon-plus", :icon_white => true
+
 %h1 Listing failure reports
 
 %table.table
@@ -20,7 +24,3 @@
         = link_to 'Show', failure_report, :class => "btn"
         = link_to 'Edit', edit_failure_report_path(failure_report), :class => "btn"
         = link_to 'Destroy', failure_report, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger"
-
-%br
-
-= link_to 'New Failure report', new_failure_report_path, :class => "btn btn-primary"

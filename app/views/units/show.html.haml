@@ -1,3 +1,7 @@
+.pull-right
+  = bootstrap_button 'Edit', edit_unit_path(@unit), :icon => 'icon-pencil'
+  = bootstrap_button 'History', '', :type => "btn-primary", :icon => "icon-th-list", :icon_white => true, :disabled => true
+
 %dl.dl-horizontal
   %dt Part:
   %dd= @unit.part
@@ -5,5 +9,3 @@
   %dd= @unit.serial
   %dt Contract:
   %dd= @unit.contract
-
-= link_to 'Edit', edit_unit_path(@unit), :class => "btn"
