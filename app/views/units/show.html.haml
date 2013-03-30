@@ -1,6 +1,7 @@
 .pull-right
-  = bootstrap_button 'Edit', edit_unit_path(@unit), :icon => 'icon-pencil'
-  = bootstrap_button 'History', '', :type => "btn-primary", :icon => "icon-th-list", :icon_white => true, :disabled => true
+  = bootstrap_button 'Edit', edit_unit_path(@unit), :icon => 'icon-edit'
+  = bootstrap_button 'Workflow history', '', :icon => 'icon-th-list', :disabled => true
+  = bootstrap_button 'Update', '', :type => "btn-primary", :icon => 'icon-qrcode', :icon_white => true, :disabled => true
 
 %dl.dl-horizontal
   %dt Part:
