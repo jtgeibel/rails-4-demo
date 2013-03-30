@@ -7,4 +7,5 @@
 
   .form-actions
     = f.button :submit, :class => "btn-primary"
+    = link_to 'Destroy', @unit, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger" if @unit.persisted?
     = bootstrap_button "Cancel", @cancel_path
