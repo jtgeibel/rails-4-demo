@@ -6,7 +6,11 @@ ruby '1.9.3'
 gem 'rails', '4.0.0.beta1'
 
 group :development do
-  gem 'sqlite3'
+  # gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Gems used only for assets and not required
