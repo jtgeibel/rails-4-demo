@@ -1,8 +1,10 @@
 DemoApp::Application.routes.draw do
+  get "reports/tmp"
   resources :units
 
   get "welcome/index"
   resources :failure_reports
+  get "reports/*other" => "reports#tmp"
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
