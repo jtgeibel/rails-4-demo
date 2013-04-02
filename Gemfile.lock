@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jtgeibel/twitter-bootstrap-markup-rails.git
-  revision: aa70dfb1bd7ac0d42e0a9fa1237d97b87c8d376c
+  revision: ecc179edd035addba2d9f571ef75c1497b6e5945
   specs:
     twitter-bootstrap-markup-rails (0.3.2.2)
       railties (> 3)
